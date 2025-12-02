@@ -1,6 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Gaming blog loaded!");
+// MUSIC BUTTON
+let music = new Audio("music.mp3");
+music.loop = true;
 
-    // Simple greeting popup
-    alert("Welcome to the Gaming Blog!");
+document.getElementById("musicBtn").addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
 });
